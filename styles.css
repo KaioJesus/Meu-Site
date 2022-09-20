@@ -1,0 +1,79 @@
+body img{
+    margin-top:32px;
+    margin-bottom:10px;
+    border-radius: 50%;
+    border: 5px solid #ffffff;
+    width: 10%;
+    animation: fromTop .7s .2s backwards;
+}
+body img:hover{
+    transform: scale(1.1);
+}
+
+body {
+    background-image: url('./assets/Fundo.png');
+    color:white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+h1{
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 28px;
+}
+h2{
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: normal;
+}
+a{
+    color: white;
+    text-decoration: none;
+    /* sem sublinhados, italicos, etc */
+    background-color: rgba(116, 100, 100, 0.411);
+    border-radius: 20px;
+    display: inline-block;
+    /* a só funcionam como textos corridos, o display fala para ele agir como um bloco */
+    width: 150px;
+    height: 35px;
+    line-height: 35px;
+    margin-bottom: 10px;
+    animation: fromBottom .9s backwards;
+}
+
+h1{
+    /* Selecionando a seção que quero estilizar, a primeira delas */
+    animation: fromBottom .3s backwards;
+}
+h2{
+    /* Selecionando a seção que quero estilizar, a segunda delas */
+    animation: fromBottom .6s backwards;
+}
+
+@keyframes fromTop{
+    /* @keyframes inicio da animação fromTop é o nome da animação -> nome pode ser o que eu quiser */
+    /* key frame sempre terá de onde começa "from" e onde termina "to" */
+    from{
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    top{
+        opacity: 1;
+        transform: translateY(0)
+        /* posição 0 é a posição que já está "alo math" */
+    }
+}
+
+@keyframes fromBottom {
+    from{
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
